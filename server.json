@@ -1,0 +1,53 @@
+{
+  "edition": [
+    {
+      "id": 1,
+      "titulo": "Demon Slayes",
+      "autor": "Koyoharu Gotouge",
+      "editora": "Shueisha",
+      "ano": 2016,
+      "status": "check",
+      "nota": 5,
+      "comentario": "Muito bom!"
+    },
+    {
+      "id": 2,
+      "titulo": "Batman: Son of the Demon",
+      "autor": "Mike W. Barr",
+      "editora": "DC Comics",
+      "ano": 1987,
+      "status": "noCheck",
+      "nota": 0,
+      "comentario": ""
+    },
+    {
+      "titulo": "Homem-Aranha",
+      "autor": "Dan Slott",
+      "editora": "Panini",
+      "ano": 2022,
+      "status": "check",
+      "nota": 3,
+      "comentario": "Legal",
+      "id": 3
+    },
+    {
+      "titulo": "Homem-Aranha: Aranhaverso",
+      "autor": "Dan Slott, Giuseppe Camuncoli, Olivier Coipel",
+      "editora": "Panini",
+      "ano": 2022,
+      "status": "noCheck",
+      "nota": 0,
+      "comentario": "",
+      "id": 4
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "nome": "Luand Neves",
+      "nome_usuario": "LuNeves",
+      "email": "luand@teste.com",
+      "senha": "123"
+    }
+  ]
+}
