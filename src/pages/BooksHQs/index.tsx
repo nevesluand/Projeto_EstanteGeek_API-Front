@@ -8,7 +8,7 @@ import { SearchForm } from './components/SearchForm';
 import { BooksHQsContext } from "../../context/BooksHQsContext";
 
 import { BooksHQsTable, BooksHQsContainer } from './styles';
-import { ProfileProvider } from "../../context/ProfileContext";
+import { ProfileProvider } from "../../context/ProfilesContext";
 
 export function BooksHQs() {
     const { booksHQs } = useContext(BooksHQsContext)

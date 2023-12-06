@@ -3,7 +3,7 @@ import { Book, ListChecks, User } from "@phosphor-icons/react/dist/ssr";
 
 import { SummaryContainer, SummaryCard } from "./styles";
 
-import { ProfileContext } from "../../context/ProfileContext";
+import { ProfileContext } from "../../context/ProfilesContext";
 import { useSummary } from "../../hooks/useSummary";
 
 export function Summary() {
@@ -19,7 +19,7 @@ export function Summary() {
                 </header>
                 {profiles.map(profile => {
                     return(
-                        <strong>{profile.nome}</strong>
+                        <strong key={profile.id}>{profile.nome}</strong>
                     )
                 })}
             </SummaryCard>

@@ -19,6 +19,16 @@
       "status": "noCheck",
       "nota": 0,
       "comentario": ""
+    },
+    {
+      "titulo": "teste",
+      "autor": "testes",
+      "editora": "acb",
+      "ano": 1999,
+      "status": "noCheck",
+      "nota": 0,
+      "comentario": "",
+      "id": 3
     }
   ],
   "profile": [

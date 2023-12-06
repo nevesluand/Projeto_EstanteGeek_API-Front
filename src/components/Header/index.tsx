@@ -1,6 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 
 import { NewHqModal } from "../NewHqModal";
+import { LoginModal } from "../LoginModal";
 
 import { HeaderContainer, HeaderContent, NewHqButton } from "./styles";
 import logoImg from '../../assets/logo.png';
@@ -11,13 +12,23 @@ export function Header() {
             <HeaderContent>
                 <img src={logoImg} alt="" />
 
-                <Dialog.Root>
-                    <Dialog.Trigger asChild>
-                        <NewHqButton>Novas HQ's</NewHqButton>
-                    </Dialog.Trigger>
+                <div>
+                    <Dialog.Root>
+                        <Dialog.Trigger asChild>
+                            <NewHqButton>Login</NewHqButton>
+                        </Dialog.Trigger>
 
-                    <NewHqModal />
-                </Dialog.Root>
+                        <LoginModal />
+                    </Dialog.Root>
+                    {' '}
+                    <Dialog.Root>
+                        <Dialog.Trigger asChild>
+                            <NewHqButton>Novas HQ's</NewHqButton>
+                        </Dialog.Trigger>
+
+                        <NewHqModal />
+                    </Dialog.Root>
+                </div>
             </HeaderContent>
         </HeaderContainer>
     )
