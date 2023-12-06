@@ -23,11 +23,11 @@
     {
       "titulo": "teste",
       "autor": "testes",
-      "editora": "acb",
-      "ano": 1999,
-      "status": "noCheck",
-      "nota": 0,
-      "comentario": "",
+      "editora": "Panini",
+      "ano": 1998,
+      "status": "check",
+      "nota": 4,
+      "comentario": "booooom",
       "id": 3
     }
   ],

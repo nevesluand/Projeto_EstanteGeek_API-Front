@@ -1,13 +1,12 @@
 import * as Dialog  from "@radix-ui/react-dialog"
 import * as z from 'zod';
-import { useContext } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { X } from "@phosphor-icons/react";
 import { useForm } from "react-hook-form";
 
-import { CloseButton, Content, Overlay } from './styles';
+import { api } from "../../lib/axios";
 
-import { ProfileContext } from "../../context/ProfilesContext";
+import { CloseButton, Content, Overlay } from './styles';
 
 const newProfileSchema = z.object({
     nome: z.string(),
@@ -19,8 +18,6 @@ const newProfileSchema = z.object({
 type NewProfileFormInputs = z.infer<typeof newProfileSchema>
 
 export function RegisterProfileModal() {
-    const { createProfile } = useContext(ProfileContext)
-
     const { 
         register, 
         handleSubmit,
@@ -31,9 +28,9 @@ export function RegisterProfileModal() {
     })
 
     async function handleCreateNewProfile(data: NewProfileFormInputs) {
-        const { nome, nome_usuario, email, senha } = data;
+        const { nome, nome_usuario, email, senha } = data
         
-        await createProfile({
+        await api.post('profile', {
             nome,
             nome_usuario,
             email,
