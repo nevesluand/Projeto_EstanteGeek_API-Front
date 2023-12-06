@@ -22,7 +22,6 @@ export function Summary() {
                         <strong>{profile.nome}</strong>
                     )
                 })}
-                
             </SummaryCard>
 
             <SummaryCard>

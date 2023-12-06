@@ -5,8 +5,6 @@ import { NewHqModal } from "../NewHqModal";
 import { HeaderContainer, HeaderContent, NewHqButton } from "./styles";
 import logoImg from '../../assets/logo.png';
 
-
-
 export function Header() {
     return (
         <HeaderContainer>
