@@ -24,7 +24,7 @@ export function ProfileProvider({ children }: ProfileProviderProps){
     const [profiles, setProfiles] = useState<Profile[]>([])
     
     async function fetchProfiles(query?: string) {
-        const response = await api.get('profile', {
+        const response = await api.get('profiles', {
             params: {
                 _sort: 'createdAt',
                 _order: 'desc',

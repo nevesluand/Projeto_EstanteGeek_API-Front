@@ -38,7 +38,7 @@ export function BookHqProvider({ children }: BookHqProviderProps){
     const [booksHQs, setBooksHQs] = useState<BookHQ[]>([])
 
     async function fetchBooksHQs(query?: string) {
-        const response = await api.get('edition', {
+        const response = await api.get('editions', {
             params: {
                 _sort: 'createdAt',
                 _order: 'desc',
@@ -52,7 +52,7 @@ export function BookHqProvider({ children }: BookHqProviderProps){
     async function createBookHQ(data: CreateBookHQInput){
         const { titulo, autor, editora, ano, status, nota, comentario } = data;
 
-        const response = await api.post('edition', {
+        const response = await api.post('editions', {
             titulo, 
             autor, 
             editora, 

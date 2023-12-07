@@ -30,7 +30,7 @@ export function RegisterProfileModal() {
     async function handleCreateNewProfile(data: NewProfileFormInputs) {
         const { nome, nome_usuario, email, senha } = data
         
-        await api.post('profile', {
+        await api.post('profiles', {
             nome,
             nome_usuario,
             email,
