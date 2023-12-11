@@ -26,6 +26,7 @@ interface BookHqContextType {
     booksHQs: BookHQ[];
     fetchBooksHQs: (query?: string) => Promise<void>;
     createBookHQ: (data: CreateBookHQInput) => Promise<void>;
+    deleteBooksHQs: (id: number) => Promise<void>;
 }
 
 interface BookHqProviderProps {
@@ -52,6 +53,9 @@ export function BookHqProvider({ children }: BookHqProviderProps){
     async function createBookHQ(data: CreateBookHQInput){
         const { titulo, autor, editora, ano, status, nota, comentario } = data;
 
+        console.log(nota)
+        console.log(comentario)
+
         const response = await api.post('editions', {
             titulo, 
             autor, 
@@ -65,6 +69,16 @@ export function BookHqProvider({ children }: BookHqProviderProps){
         setBooksHQs(state => [response.data, ...state]);
     }
 
+    async function deleteBooksHQs(id: number) {
+        const response = await api.delete('editions', {
+            params: {
+                id: id
+            }
+        })
+
+        setBooksHQs(response.data)
+    }
+
     useEffect(() => {
         fetchBooksHQs();
     }, [])
@@ -74,6 +88,7 @@ export function BookHqProvider({ children }: BookHqProviderProps){
             booksHQs,
             fetchBooksHQs,
             createBookHQ,
+            deleteBooksHQs
         }}>
             {children}
         </BooksHQsContext.Provider>

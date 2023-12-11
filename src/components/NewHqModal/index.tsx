@@ -43,7 +43,7 @@ export function NewHqModal() {
             editora, 
             ano, 
             status, 
-            nota: nota || 0, 
+            nota, 
             comentario,
         })
 

@@ -37,3 +37,21 @@ export const BooksHQsTable = styled.table`
         }
     }
 `;
+
+export const BooksHQsLixeira = styled.table`
+    display: flex;
+    align-items: center;
+    
+    button {
+        background: transparent;
+        border: 0;
+        color: ${props => props.theme['gray-400']};
+        cursor: pointer;
+        line-height: 0;
+        border-radius: 2px;
+
+        &:hover {
+            color: ${props => props.theme['red-500']};
+        }
+    }
+`;

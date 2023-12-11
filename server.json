@@ -1,5 +1,5 @@
 {
-  "edition": [
+  "editions": [
     {
       "id": 1,
       "titulo": "Demon Slayes",
@@ -21,7 +21,7 @@
       "comentario": ""
     }
   ],
-  "profile": [
+  "profiles": [
     {
       "id": 1,
       "nome": "Luand Neves",
